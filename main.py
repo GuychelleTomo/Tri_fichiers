@@ -33,17 +33,22 @@ def parcourir_dossier2():
 root = ctk.CTk()
 # changer le theme de la fenetre
 # rajout des annees 
-valeurs = ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020',
-            '2021', '2022', '2023','2024'
+valeurs = ['2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012',
+           '2011', '2010'
            ]
 
 ctk.set_appearance_mode("dark")
 
 root.geometry("500x500")
 
-frame = ctk.CTkFrame(root, width=480, height=350, fg_color="#00066f")
+
+frame = ctk.CTkFrame(root, width=480, height=350, fg_color="#444444")
 # frame.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 frame.pack(ipady = 20 , pady = 30)
+
+# Rajout du titre
+titre = ctk.CTkLabel(frame, text="TRI FICHERS PAR DATE", fg_color="#444444", font=('arial black', 20))
+titre.place(relx = 0.5 , rely = 0.06, anchor=tk.N )
 
 entry_entre=ctk.CTkEntry(frame, placeholder_text="C:\\Users\\DELL\\Documents")
 entry_entre.place(relx=0.1, rely=0.2, relwidth=0.85)
@@ -52,7 +57,7 @@ bouton = ctk.CTkButton(frame , text="parcourir...",command= parcourir_dossier)
 bouton.place(relx=0.95, rely=0.28, anchor = tk.NE)
 
 
-lbl_nomFichier = ctk.CTkLabel(frame, text="dossier sauvegarde", fg_color="#00066f", font=('arial black', 13) )
+lbl_nomFichier = ctk.CTkLabel(frame, text="dossier sauvegarde", fg_color="#444444", font=('arial black', 13) )
 lbl_nomFichier.place(relx=0.1, rely=0.4)
 
 entry_nomFichier = ctk.CTkEntry(frame,placeholder_text="-- dossier de sauvegard --")
